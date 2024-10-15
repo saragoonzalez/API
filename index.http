@@ -1,0 +1,96 @@
+# Obtener todos los comercios (opcionalmente ordenados por CIF)
+GET http://localhost:3000/api/comercios?ordenarPorCIF=true
+
+# Obtener un comercio por su CIF
+GET http://localhost:3000/api/comercios/12345678A
+
+# Guardar un nuevo comercio
+POST http://localhost:3000/api/comercios
+Content-Type: application/json
+
+{
+  "nombre": "Comercio Test",
+  "cif": "12345678A",
+  "direccion": "Calle Gran Vía 123, Madrid",
+  "email": "test@comercio.com",
+  "telefono": "987654321",
+  "numeroPagina": 1
+}
+
+# Guardar otro comercio
+POST http://localhost:3000/api/comercios
+Content-Type: application/json
+
+{
+  "nombre": "Comercio Ejemplo",
+  "cif": "87654321B",
+  "direccion": "Avenida de América 742, Madrid",
+  "email": "ejemplo@comercio.com",
+  "telefono": "123456789",
+  "numeroPagina": 2
+}
+# Guardar un tercer comercio
+POST http://localhost:3000/api/comercios
+Content-Type: application/json
+
+{
+  "nombre": "Comercio Prueba",
+  "cif": "11223344C",
+  "direccion": "Calle de Alcalá 456, Madrid",
+  "email": "prueba@comercio.com",
+  "telefono": "555555555",
+  "numeroPagina": 3
+}
+
+# Guardar un cuarto comercio
+POST http://localhost:3000/api/comercios
+Content-Type: application/json
+
+{
+  "nombre": "Comercio Cuatro",
+  "cif": "33445566D",
+  "direccion": "Calle del Arenal 789, Madrid",
+  "email": "cuatro@comercio.com",
+  "telefono": "666666666",
+  "numeroPagina": 4
+}
+
+# Guardar un quinto comercio
+POST http://localhost:3000/api/comercios
+Content-Type: application/json
+
+{
+  "nombre": "Comercio Cinco",
+  "cif": "44556677E",
+  "direccion": "Paseo de la Castellana 101, Madrid",
+  "email": "cinco@comercio.com",
+  "telefono": "777777777",
+  "numeroPagina": 5
+}
+
+# Guardar un sexto comercio
+POST http://localhost:3000/api/comercios
+Content-Type: application/json
+
+{
+  "nombre": "Comercio Seis",
+  "cif": "55667788F",
+  "direccion": "Plaza Mayor 202, Madrid",
+  "email": "seis@comercio.com",
+  "telefono": "888888888",
+  "numeroPagina": 6
+}
+
+# Modificar un comercio a partir de su CIF
+PUT http://localhost:3000/api/comercios/12345678A
+Content-Type: application/json
+
+{
+  "direccion": "Calle de Serrano 456, Madrid"
+}
+
+# Borrar un comercio por su CIF (borrado lógico)
+DELETE http://localhost:3000/api/comercios/12345678A?borradoLogico=true
+
+# Borrar un comercio por su CIF (borrado físico)
+DELETE http://localhost:3000/api/comercios/12345678A
